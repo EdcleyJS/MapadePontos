@@ -20,6 +20,8 @@ d3.json("./data/pickup.json",function(error,data){
   });
 });
 $(document).ready(function () {
+	InicioDot();
+	inicioDotTaxi();
 	//perguntasT1=shuffle(perguntasT1);
 	//perguntasT2=shuffle(perguntasT2);
 	//perguntasT3=shuffle(perguntasT3);
