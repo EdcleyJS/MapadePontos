@@ -189,10 +189,10 @@ function Vis03TutorialFunction(dataset){
 }
 
 function InicioDot(){
-var recife;
-var pointsdots = [];
-var xMin,yMin,xMax,yMax;
-var contdots=0;
+  var recife;
+  var pointsdots = [];
+  var xMin,yMin,xMax,yMax;
+  var contdots=0;
   L.geoJson(dataset,{
     onEachFeature: async function (feature, layer) {
         await sleep(3000);
@@ -355,10 +355,10 @@ function inicioTaxi(dataset){
   infoTaxi.addTo(mapTaxi);
 }
 function inicioDotTaxi(){
-var recife;
-var pointsdots = [];
-var xMin,yMin,xMax,yMax;
-var contdots=0;
+  var recife;
+  var pointsdots = [];
+  var xMin,yMin,xMax,yMax;
+  var contdots=0;
   L.geoJson(datasettaxi,{
     onEachFeature: async function (feature, layer) {
         await sleep(3000);
