@@ -265,7 +265,84 @@ function InicioDot(){
     }
   });
 }
-
+function inicioDotTaxi(){
+  var recife;
+  var pointsdots = [];
+  var xMin,yMin,xMax,yMax;
+  var contdots=0;
+  L.geoJson(datasettaxi,{
+    onEachFeature: async function (feature, layer) {
+        await sleep(3000);
+        novaDist= dotMapPrep(distribuicaoNYC(feature.properties.OBJECTID));
+        //console.log(Math.max.apply(Math, getDis(feature.properties.name)));
+        bounds = layer.getBounds();
+        width = Math.abs(bounds._northEast.lng - bounds._southWest.lng);
+        height = Math.abs(bounds._northEast.lat - bounds._southWest.lat);
+        area= (turf.area(feature.geometry)/10000000);     
+        //area= area/3;
+          xMin = Infinity;
+          yMin = Infinity;
+          xMax = -Infinity;
+          yMax = -Infinity;
+        /*var LatLngs=layer.getLatLngs()[0];  
+        LatLngs.forEach(p=>{
+          var nova= map.unproject([p.lat,p.lng]);
+          p.lat=nova.lat;
+          p.lng=nova.lng;
+        });*/
+        
+        layer.getLatLngs()[0].forEach(function(p,i){
+            if (p.lat<xMin) xMin = p.lat;
+            if (p.lat>xMax) xMax = p.lat;
+            if (p.lng<yMin) yMin = p.lng;
+            if (p.lng>yMax) yMax = p.lng;
+        });
+        var widthh = layer.getBounds().getNorth()-layer.getBounds().getSouth();//(xMax - xMin); 
+        var heightt = layer.getBounds().getEast()-layer.getBounds().getWest();//(yMax - yMin);
+        var polygon=layer.getLatLngs()[0];
+        //console.log(widthh+'-'+heightt);
+                  //console.log(bounds);
+        //console.log(width+" "+height);
+        //console.log(feature.properties.name);
+        var enveloped = turf.envelope(feature);
+        var a=turf.bbox(enveloped);
+        var grid = turf.pointGrid(a,0.1);
+        //console.log(grid.features.length);
+        var pointsGrid=[];
+        grid.features.forEach(function(d){
+            var aux=d.geometry.coordinates;
+            var q=L.latLng(aux[1],aux[0]);
+            //if (leafletPip.pointInLayer(q, L.geoJSON(layer.toGeoJSON()), true).length > 0) {console.log('circulo dentro');}
+            //p = L.latLng(bounds._southWest.lat + Math.random() * height, bounds._southWest.lng + Math.random() * width);
+            if (leafletPip.pointInLayer(q, L.geoJSON(layer.toGeoJSON()), true).length > 0) {
+              pointsGrid.push(q);
+            }
+        });
+        var indice=0;
+        pointsGrid=shuffle(pointsGrid);
+        var pdisponiveis= pointsGrid.length;
+        novaDist.forEach(function(d){
+          cor= colorDT(d[0]);
+          var limite=Math.round((pointsGrid.length)*d[1]);
+          var i= indice;
+          var l=limite+indice;
+          for (i; i<l; i++) {
+              if (pdisponiveis>0) {
+                dotsTaxi.push(L.circleMarker(pointsGrid[i], {radius: 1.6, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
+                dotsZ1Taxi.push(L.circleMarker(pointsGrid[i], {radius: 2.2, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
+                dotsZ2Taxi.push(L.circleMarker(pointsGrid[i], {radius: 3.0, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
+                dotsZ3Taxi.push(L.circleMarker(pointsGrid[i], {radius: 4.6, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
+                pdisponiveis--; 
+                //indice++;              
+              }
+          }
+          indice+=limite;
+        });
+    }
+  });
+}
+InicioDot();
+inicioDotTaxi();
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
   maxZoom: 18,
@@ -354,81 +431,3 @@ function inicioTaxi(dataset){
   };
   infoTaxi.addTo(mapTaxi);
 }
-function inicioDotTaxi(){
-  var recife;
-  var pointsdots = [];
-  var xMin,yMin,xMax,yMax;
-  var contdots=0;
-  L.geoJson(datasettaxi,{
-    onEachFeature: async function (feature, layer) {
-        await sleep(3000);
-        novaDist= dotMapPrep(distribuicaoNYC(feature.properties.OBJECTID));
-        //console.log(Math.max.apply(Math, getDis(feature.properties.name)));
-        bounds = layer.getBounds();
-        width = Math.abs(bounds._northEast.lng - bounds._southWest.lng);
-        height = Math.abs(bounds._northEast.lat - bounds._southWest.lat);
-        area= (turf.area(feature.geometry)/10000000);     
-        //area= area/3;
-          xMin = Infinity;
-          yMin = Infinity;
-          xMax = -Infinity;
-          yMax = -Infinity;
-        /*var LatLngs=layer.getLatLngs()[0];  
-        LatLngs.forEach(p=>{
-          var nova= map.unproject([p.lat,p.lng]);
-          p.lat=nova.lat;
-          p.lng=nova.lng;
-        });*/
-        
-        layer.getLatLngs()[0].forEach(function(p,i){
-            if (p.lat<xMin) xMin = p.lat;
-            if (p.lat>xMax) xMax = p.lat;
-            if (p.lng<yMin) yMin = p.lng;
-            if (p.lng>yMax) yMax = p.lng;
-        });
-        var widthh = layer.getBounds().getNorth()-layer.getBounds().getSouth();//(xMax - xMin); 
-        var heightt = layer.getBounds().getEast()-layer.getBounds().getWest();//(yMax - yMin);
-        var polygon=layer.getLatLngs()[0];
-        //console.log(widthh+'-'+heightt);
-                  //console.log(bounds);
-        //console.log(width+" "+height);
-        //console.log(feature.properties.name);
-        var enveloped = turf.envelope(feature);
-        var a=turf.bbox(enveloped);
-        var grid = turf.pointGrid(a,0.1);
-        //console.log(grid.features.length);
-        var pointsGrid=[];
-        grid.features.forEach(function(d){
-            var aux=d.geometry.coordinates;
-            var q=L.latLng(aux[1],aux[0]);
-            //if (leafletPip.pointInLayer(q, L.geoJSON(layer.toGeoJSON()), true).length > 0) {console.log('circulo dentro');}
-            //p = L.latLng(bounds._southWest.lat + Math.random() * height, bounds._southWest.lng + Math.random() * width);
-            if (leafletPip.pointInLayer(q, L.geoJSON(layer.toGeoJSON()), true).length > 0) {
-              pointsGrid.push(q);
-            }
-        });
-        var indice=0;
-        pointsGrid=shuffle(pointsGrid);
-        var pdisponiveis= pointsGrid.length;
-        novaDist.forEach(function(d){
-          cor= colorDT(d[0]);
-          var limite=Math.round((pointsGrid.length)*d[1]);
-          var i= indice;
-          var l=limite+indice;
-          for (i; i<l; i++) {
-              if (pdisponiveis>0) {
-                dotsTaxi.push(L.circleMarker(pointsGrid[i], {radius: 1.6, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
-                dotsZ1Taxi.push(L.circleMarker(pointsGrid[i], {radius: 2.2, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
-                dotsZ2Taxi.push(L.circleMarker(pointsGrid[i], {radius: 3.0, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
-                dotsZ3Taxi.push(L.circleMarker(pointsGrid[i], {radius: 4.6, weight: 1,fillColor: cor,fillOpacity:1, color: cor,renderer: myRendererTaxi}));
-                pdisponiveis--; 
-                //indice++;              
-              }
-          }
-          indice+=limite;
-        });
-    }
-  });
-}
-InicioDot();
-inicioDotTaxi();
