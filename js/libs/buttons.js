@@ -190,6 +190,8 @@ $(document).ready(function () {
 		if($('input[name ="inlineRadioOptions"]:checked').val()==undefined || $('input[name ="inlineRadioOptions"]:checked').val()=='Não'){
 			$('.alert').addClass("show");//alert('Você Precisa aceitar os termos para começar.');
 		}else{
+			InicioDot();
+			inicioDotTaxi();
 			$('.alert').removeClass("show");
 	    	$('#header').css('display','none');
 	    	$('#tutorial').css('display','');			
