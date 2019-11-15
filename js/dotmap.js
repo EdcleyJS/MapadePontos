@@ -429,6 +429,5 @@ function inicioTaxi(dataset){
   };
   infoTaxi.addTo(mapTaxi);
 }
-debugger
 InicioDot();
 inicioDotTaxi();
