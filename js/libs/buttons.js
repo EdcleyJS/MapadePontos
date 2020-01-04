@@ -8,7 +8,6 @@ d3.json("./data/dados.json",function(error,data){
   database=data;
   d3.json("./data/pe.json",function(error,dados){
     dataset=dados;
-
   });
 });
 d3.json("./data/pickup.json",function(error,data){
@@ -21,9 +20,6 @@ d3.json("./data/pickup.json",function(error,data){
   });
 });
 $(document).ready(function () {
-	//perguntasT1=shuffle(perguntasT1);
-	//perguntasT2=shuffle(perguntasT2);
-	//perguntasT3=shuffle(perguntasT3);
 	arr=shuffle(arr);
 	//PREENCHE TODAS AS PERGUNTAS.
 	arr.forEach(function(d,i){
@@ -165,27 +161,11 @@ $(document).ready(function () {
 	    arr[i]=d+1;
 	});
 	//COLOCAR AS TABS DAS PERGUNTAS EM ORDEM ALEATÓRIA
-	//var nv= $('#pills-tab > li');
-   //	var nvf=nv.slice(4,5);
-	//nv=nv.slice(0,4);
-	//nv=shuffle(nv);
-	//$('#pills-tab').empty();
-
-	//nv.each(function(d,i){
-	// 	$('#pills-tab').append(nv[d]);
-	//});
-	//$('#pills-tab').append(nvf);
 	$('#pills-tab >li >a')[0].click();
 	$('#pills-tab >li')[1].classList.add('disabled');
-	//$('#pills-tab >li')[2].classList.add('disabled');
-	//$('#pills-tab >li')[3].classList.add('disabled');
-	//$('#pills-tab >li')[4].classList.add('disabled');
 	// BLOCO PARA INICIAR OS STEPS DE CADA ETAPA DO SISTEMA 0 - TUTORIAL. 1- PROB. COM ALPHA. 2- PROB. COM INTERVALO. 3- PONTOS 4- MÉDIA ANIMADA. 
 	stepper0 = new Stepper($('.bs-stepper')[0]);
-	//stepper1 = new Stepper($('.bs-stepper')[1]);
-	//stepper2 = new Stepper($('.bs-stepper')[1]);
 	stepper3 = new Stepper($('.bs-stepper')[1]);
-	//stepper4 = new Stepper($('.bs-stepper')[4]);
 	//OCULTA A TELA INICIAL E EXIBE O TUTORIAL
 	$('#iniciar').click(function(){
 		if($('input[name ="inlineRadioOptions"]:checked').val()==undefined || $('input[name ="inlineRadioOptions"]:checked').val()=='Não'){
@@ -276,10 +256,7 @@ $(document).ready(function () {
 	});
 	// PARA A ETAPA DE TUTORIAL CORRIGE O PROBLEMA DO TAMANHO DO MAPA POR CONTA DAS ANIMAÇÕES E INICIA OS MAPAS.
 	$('.bs-stepper')[0].addEventListener('shown.bs-stepper', function (event) {
-		/*if (event.detail.indexStep==1) {
-			InicioDot();
-		}*/
-		if(event.detail.indexStep==4){
+		if(event.detail.indexStep==3){
 			mapVis03.invalidateSize();
 		  	opcoes=['Recife','Caruaru'];
 	        Vis03TutorialFunction(dataset);
@@ -327,7 +304,7 @@ $(document).ready(function () {
 			   	var base=id.substring(3,4);
 				id=id.substring(0, 4);
 			   	var p=findP(novodataset,id);
-			    p=p.highlights;//p.slice(2,p.length);
+			    p=p.highlights;
 			    p.forEach(function(d,i){
 			    	opcoes.push(d);
 			    });
@@ -351,7 +328,6 @@ $(document).ready(function () {
 			}
 		}else{
 			//VALIDA O FORM COM INFORMAÇÕES PESSOAIS
-
 			if($(this)[0].id=='btuto1'){
 				if($('#5Form')[0].checkValidity()==false){
 					$('#5Form')[0].classList.add("was-validated");
@@ -372,7 +348,6 @@ $(document).ready(function () {
 				if(pontos!= undefined){
 					pontos.clearLayers();
 				}
-				//hops=true;
 				$('#tutorial').css('display','none');
 	    		$('#vis').css('display','');
 	    		opcoes=[];
@@ -406,12 +381,8 @@ $(document).ready(function () {
 		stepper0.previous();
 	});
 	$("#btn1,#2btn1,#3btn1,#4btn1,#btuto10").css('float','right');
-
 	// PARA CADA BOTÃO DA ÚLTIMA PERGUNTA DE CADA TÉCNICA PREPARA A PRÓXIMA TAB PARA SER EXIBIDA.
 	$("#btn1,#2btn1,#3btn1,#4btn1").click(function() {
-		/*if($('input[name='+ent+']:checked').val()==undefined){
-			$(this).parent().parent()[0].classList.add('was-validated');
-		}*/
 		var ent= $(this).parent().find('.form-group > div > div> div >').siblings()[0].name;
 		if($('input[name='+ent+']:checked').val()==undefined && $('input[name='+ent+']').hasClass('custom-control-input')==true){
 			$(this).parent().parent()[0].classList.add('was-validated');
@@ -443,13 +414,11 @@ $(document).ready(function () {
 			        console.log(nameform.id+" Estado atual ---\n" + status + "\nResultado: " + JSON.stringify(result));
 			        sucesso++;
 			    	refresh();
-			        //end=true;
 			    },
 			    error: function (request, status, erro) {
 			      	console.log(nameform.id+" Problema ocorrido: " + status + "\nDescrição: " + erro);
 			      	$.ajax(this);
 			      	return;
-			      	//nameform.submit();
 			    }
 		    });
 	    return false;
