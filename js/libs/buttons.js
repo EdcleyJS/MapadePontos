@@ -174,14 +174,6 @@ $(document).ready(function () {
 			$('.alert').removeClass("show");
 	    	$('#header').css('display','none');
 	    	$('#tutorial').css('display','');
-	    	var recursiva = function () {
-			    var tempoalert= new Date();
-			    if(tempoalert-tempoinicial>600000){
-			      alert("Se passaram 10 minutos cuidado com o tempo.");
-			    }
-			    setTimeout(recursiva,600000);
-			}
-			recursiva();
 	    	InicioDot();
 			inicioDotTaxi();		
 		}
