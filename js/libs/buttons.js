@@ -3,6 +3,7 @@ var novodataset,database,dataset,datasettaxi,databasetaxi;
 var tempoinicial=new Date(),tempofinal,tempotutorial,duracaoPerguntas,duracaotutorial,duracao;
 d3.json("./data/perguntas.json",function(error,data){
 	novodataset=data;
+		console.log(error);
 });
 d3.json("./data/dados.json",function(error,data){
   database=data;
@@ -20,6 +21,7 @@ d3.json("./data/pickup.json",function(error,data){
   });
 });
 $(document).ready(function () {
+	console.log(novodataset);
 	arr=shuffle(arr);
 	//PREENCHE TODAS AS PERGUNTAS.
 	arr.forEach(function(d,i){
@@ -232,7 +234,8 @@ $(document).ready(function () {
         skin: "big",
         grid: true,
         onChange: function (data) {
-        	opcoes=['Recife','Caruaru'];
+        	opcoes=[];
+        	//opcoes=['Recife','Caruaru'];
             alpha=data.from;
             Vis01TutorialFunction(dataset,false);
         }
@@ -248,7 +251,8 @@ $(document).ready(function () {
         skin: "big",
         grid: true,
         onChange: function (data) {
-        	opcoes=['Recife','Caruaru'];
+        	opcoes=[];
+        	//opcoes=['Recife','Caruaru'];
             left=data.from;
             right=data.to;
             Vis02TutorialFunction(dataset,true);
@@ -258,7 +262,8 @@ $(document).ready(function () {
 	$('.bs-stepper')[0].addEventListener('shown.bs-stepper', function (event) {
 		if(event.detail.indexStep==3){
 			mapVis03.invalidateSize();
-		  	opcoes=['Recife','Caruaru'];
+			opcoes=[];
+		  	//opcoes=['Recife','Caruaru'];
 	        Vis03TutorialFunction(dataset);
     	}
 	});
