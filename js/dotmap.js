@@ -123,7 +123,8 @@ function Vis02TutorialFunction(){
   };
   infoVis02.addTo(mapVis02);
 }
-function VisPerguntas(){
+async function VisPerguntas(){
+  await sleep(500);
     if(layerPerguntas!= undefined){
       layerPerguntas.clearLayers();
     }
@@ -163,7 +164,7 @@ function VisPerguntas(){
   infoVisPerguntas.addTo(mapVisPerguntas);
 }
 
-async function gera_pontos(){
+function gera_pontos(){
   if(pontos){
     pontos.clearLayers();
   }
