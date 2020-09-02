@@ -124,7 +124,6 @@ function Vis02TutorialFunction(){
   infoVis02.addTo(mapVis02);
 }
 async function VisPerguntas(){
-  await sleep(500);
     if(layerPerguntas!= undefined){
       layerPerguntas.clearLayers();
     }
