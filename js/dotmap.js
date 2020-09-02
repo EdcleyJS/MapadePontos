@@ -29,6 +29,9 @@ function Start_Update_data(){
     distributionfile = distribution;
   }
   d3.json(distributionfile,function(error,dist){
+    distribution_data=Object.keys(dist).map(function(key) {
+      return [dist[key]];
+    });
     menor = Infinity
     maior = -Infinity
     for(let key in dist){
@@ -44,9 +47,6 @@ function Start_Update_data(){
     grades = d3.scale.linear().domain([menor,maior]).ticks(12);
 
     addLegend();
-    distribution_data=Object.keys(dist).map(function(key) {
-      return [dist[key]];
-    });
     gera_pontos();
   });
 }
