@@ -75,7 +75,7 @@ $(document).ready(function () {
 				    	VisPerguntas();
 				    	bring_front(mapVisPerguntas);
 				    	mapVisPerguntas.invalidateSize();
-			    	},2000);
+			    	},2500);
 				$(this).parent().find('.form-group > div >.clicks')[0].value = clicks;
 				d2 = new Date();
 				diff = Math.abs(d1-d2)/1000;
@@ -108,7 +108,7 @@ $(document).ready(function () {
 				    	VisPerguntas();
 				    	bring_front(mapVisPerguntas);
 				    	mapVisPerguntas.invalidateSize();
-			    	},2000);
+			    	},2500);
 				}
 			}else{
 				stepper0.next();
