@@ -167,7 +167,7 @@ async function gera_pontos(){
   if(pontos){
     pontos.clearLayers();
   }
-  if(pontos_perguntas!=undefined){
+  if(pontos_perguntas.hasLayer()==true){
     pontos_perguntas.clearLayers();
   }
   dots = [];
