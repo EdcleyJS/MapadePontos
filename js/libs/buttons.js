@@ -109,7 +109,7 @@ $(document).ready(function () {
 				    	VisPerguntas();
 				    	bring_front(mapVisPerguntas);
 				    	mapVisPerguntas.invalidateSize();
-			    	},500);
+			    	},700);
 				}
 			}else{
 				stepper0.next();
