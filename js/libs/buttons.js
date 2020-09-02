@@ -69,14 +69,13 @@ $(document).ready(function () {
 			   		stepper2.next();
 			   		$(this).parent().parent().removeClass("was-validated");
 			   		var id= $(this).parent().next().find('div >div > div> ').siblings()[0].id;
-			   		//debugger
 			   		proxima_view(id);
 			   		Start_Update_data();
 			    	setTimeout(function(){
 				    	VisPerguntas();
 				    	bring_front(mapVisPerguntas);
 				    	mapVisPerguntas.invalidateSize();
-			    	},700);
+			    	},2000);
 				$(this).parent().find('.form-group > div >.clicks')[0].value = clicks;
 				d2 = new Date();
 				diff = Math.abs(d1-d2)/1000;
@@ -109,7 +108,7 @@ $(document).ready(function () {
 				    	VisPerguntas();
 				    	bring_front(mapVisPerguntas);
 				    	mapVisPerguntas.invalidateSize();
-			    	},700);
+			    	},2000);
 				}
 			}else{
 				stepper0.next();
