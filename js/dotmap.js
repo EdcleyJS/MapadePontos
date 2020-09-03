@@ -99,12 +99,26 @@ function Vis02TutorialFunction(){
               fillOpacity: 0,
               color: '#e66101'
             };
-          }else{
+          }else if(feature.properties.id==1){
             return {
               weight: 3.5,
               opacity: 1,
               fillOpacity: 0,
               color: '#d01c8b'
+            };
+          }else if(feature.properties.id==48){
+            return {
+              weight: 3.5,
+              opacity: 1,
+              fillOpacity: 0,
+              color: '#dfc27d'
+            };
+          }else if(feature.properties.id==16){
+            return {
+              weight: 3.5,
+              opacity: 1,
+              fillOpacity: 0,
+              color: '#2d004b'
             };
           }
         }else{
