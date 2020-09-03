@@ -14,6 +14,7 @@ var polyfile,polygon;
 var distributionfile;
 var distribution,distribution_data;
 var pontos,pontos_perguntas;
+var etapa_perguntas=false;
 function Start_Update_data(){
   if(!polyfile) {
     polyfile = "./data/polygons.geojson";
@@ -29,9 +30,6 @@ function Start_Update_data(){
     distributionfile = distribution;
   }
   d3.json(distributionfile,function(error,dist){
-    distribution_data=Object.keys(dist).map(function(key) {
-      return [dist[key]];
-    });
     menor = Infinity
     maior = -Infinity
     for(let key in dist){
@@ -47,6 +45,9 @@ function Start_Update_data(){
     grades = d3.scale.linear().domain([menor,maior]).ticks(12);
 
     addLegend();
+    distribution_data=Object.keys(dist).map(function(key) {
+      return [dist[key]];
+    });
     gera_pontos();
   });
 }
@@ -123,7 +124,7 @@ function Vis02TutorialFunction(){
   };
   infoVis02.addTo(mapVis02);
 }
-async function VisPerguntas(){
+function VisPerguntas(){
     if(layerPerguntas!= undefined){
       layerPerguntas.clearLayers();
     }
@@ -167,7 +168,7 @@ function gera_pontos(){
   if(pontos){
     pontos.clearLayers();
   }
-  if(pontos_perguntas!=undefined){
+  if(pontos_perguntas){
     pontos_perguntas.clearLayers();
   }
   dots = [];
@@ -207,4 +208,9 @@ function gera_pontos(){
         });
     }
   });
+  if(etapa_perguntas==true){
+    VisPerguntas();
+    bring_front(mapVisPerguntas);
+    mapVisPerguntas.invalidateSize();
+  }
 }
