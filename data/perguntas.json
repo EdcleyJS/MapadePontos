@@ -1,510 +1,488 @@
 [
   {
     "id": "01",
-    "question_text": "Distancia longa?",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife"
     ],
-    "answer": "47",
-    "distance": "Far",
+    "answer": "59",
+    "distance": "Near 1",
     "variance": {},
     "size": {}
   },
   {
     "id": "02",
-    "question_text": "Distancia curta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Jaboatão dos Guararapes"
     ],
-    "answer": "56",
-    "distance": "Near",
+    "answer": "24",
+    "distance": "Near 2",
     "variance": {},
     "size": {}
   },
   {
     "id": "03",
-    "question_text": "Tamanho pequeno",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5"
     ],
     "highlights": [
-      "São Lourenço da Mata"
     ],
-    "answer": "33",
-    "distance": {},
+    "answer": "96",
+    "distance": "Near 3",
     "variance": {},
-    "size": "Small"
+    "size": {}
   },
   {
     "id": "04",
-    "question_text": "Tamanho grande",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
-      "Ipojuca",
-      "Cabo de Santo Agostinho"
     ],
     "highlights": [
-      "Ipojuca",
-      "Cabo de Santo Agostinho"
     ],
-    "answer": "Ipojuca",
-    "distance": {},
+    "answer": "37",
+    "distance": "Near 4",
     "variance": {},
-    "size": "Large"
+    "size": {}
   },
   {
     "id": "05",
-    "question_text": "Variancia baixa",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Ipojuca",
-      "Cabo de Santo Agostinho"
     ],
-    "answer": "67",
-    "distance": {},
-    "variance": "Small",
+    "answer": "59",
+    "distance": "Medium 1",
+    "variance": {},
     "size": {}
   },
   {
     "id": "06",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "24",
+    "distance": "Medium 2",
+    "variance": {},
     "size": {}
   },
   {
     "id": "07",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "96",
+    "distance": "Medium 3",
+    "variance": {},
     "size": {}
   },
   {
     "id": "08",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "37",
+    "distance": "Medium 4",
+    "variance": {},
     "size": {}
   },
   {
     "id": "09",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "59",
+    "distance": "Far 1",
+    "variance": {},
     "size": {}
   },
   {
     "id": "10",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "24",
+    "distance": "Far 2",
+    "variance": {},
     "size": {}
   },
   {
     "id": "11",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "96",
+    "distance": "Far 3",
+    "variance": {},
     "size": {}
   },
   {
     "id": "12",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
-    "distance": {},
-    "variance": "Large",
+    "answer": "37",
+    "distance": "Far 4",
+    "variance": {},
     "size": {}
   },
   {
     "id": "13",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "59",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Small 1"
   },
   {
     "id": "14",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "24",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Small 2"
   },
   {
     "id": "15",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "96",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Small 3"
   },
   {
     "id": "16",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "37",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Small 4"
   },
   {
     "id": "17",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "59",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Medium 1"
   },
   {
     "id": "18",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "24",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Medium 2"
   },
   {
     "id": "19",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "96",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Medium 3"
   },
   {
     "id": "20",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "37",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Medium 4"
   },
   {
     "id": "21",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "59",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Large 1"
   },
   {
     "id": "22",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "24",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Large 2"
   },
   {
     "id": "23",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "96",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Large 3"
   },
   {
     "id": "24",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "37",
     "distance": {},
-    "variance": "Large",
-    "size": {}
+    "variance": {},
+    "size": "Large 4"
   },
   {
     "id": "25",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "59",
     "distance": {},
-    "variance": "Large",
+    "variance": "Small 1",
     "size": {}
   },
   {
     "id": "26",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "24",
     "distance": {},
-    "variance": "Large",
+    "variance": "Small 2",
     "size": {}
   },
   {
     "id": "27",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "96",
     "distance": {},
-    "variance": "Large",
+    "variance": "Small 3",
     "size": {}
   },
   {
     "id": "28",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "37",
     "distance": {},
-    "variance": "Large",
+    "variance": "Small 4",
     "size": {}
   },
   {
     "id": "29",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "59",
     "distance": {},
-    "variance": "Large",
+    "variance": "Medium 1",
     "size": {}
   },
   {
     "id": "30",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "24",
     "distance": {},
-    "variance": "Large",
+    "variance": "Medium 2",
     "size": {}
   },
   {
     "id": "31",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "96",
     "distance": {},
-    "variance": "Large",
+    "variance": "Medium 3",
     "size": {}
   },
   {
     "id": "32",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "37",
     "distance": {},
-    "variance": "Large",
+    "variance": "Medium 4",
     "size": {}
   },
   {
     "id": "33",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "59",
     "distance": {},
-    "variance": "Large",
+    "variance": "Large 1",
     "size": {}
   },
   {
     "id": "34",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "24",
     "distance": {},
-    "variance": "Large",
+    "variance": "Large 2",
     "size": {}
   },
   {
     "id": "35",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "96",
     "distance": {},
-    "variance": "Large",
+    "variance": "Large 3",
     "size": {}
   },
   {
     "id": "36",
-    "question_text": "Variancia alta",
+    "question_text": "Qual é a probabilidade de um valor da região destacada em Rosa ser maior do que um valor da região destacada em Laranja?",
     "op": [
     ],
     "highlights": [
-      "Recife",
-      "Santa Cruz"
+      
+      
     ],
-    "answer": "14",
+    "answer": "37",
     "distance": {},
-    "variance": "Large",
+    "variance": "Large 4",
     "size": {}
   }
 ]
