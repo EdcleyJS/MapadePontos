@@ -53,7 +53,6 @@ $(document).ready(function () {
     		mapVis02.invalidateSize();
     	}
     	if(event.detail.indexStep==4){
-    		//console.log(event.detail.from);
 	    	if($('#pergunta_text')[0].checkValidity()==false || $('#pergunta_text')[0].value>60 || $('#pergunta_text')[0].value<40){
 	    		$('#pergunta_text')[0].value="";
 				$('#FormTeste')[0].classList.add("was-validated");
