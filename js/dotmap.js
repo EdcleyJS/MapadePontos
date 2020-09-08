@@ -1,10 +1,18 @@
 var left=200,right=500,dots=[];
 var mapVis02 = L.map('vis02',{zoomControl: false,preferCanvas: true,attributionControl: false,crs: L.CRS.Simple}).setView([0.203125,0.6640625], 6);
 var mapVisPerguntas = L.map('visPerguntas',{zoomControl: false,preferCanvas: true,attributionControl: false,crs: L.CRS.Simple}).setView([0.203125,0.6640625], 6);
+mapVis02.dragging.disable();
+mapVis02.touchZoom.disable();
 mapVis02.doubleClickZoom.disable();
 mapVis02.scrollWheelZoom.disable();
+mapVis02.boxZoom.disable();
+mapVis02.keyboard.disable();
+mapVisPerguntas.dragging.disable();
+mapVisPerguntas.touchZoom.disable();
 mapVisPerguntas.doubleClickZoom.disable();
 mapVisPerguntas.scrollWheelZoom.disable();
+mapVisPerguntas.boxZoom.disable();
+mapVisPerguntas.keyboard.disable();
 var myRenderer = L.canvas({ padding: 0.5 });
 var grades;
 var geodata;
@@ -41,8 +49,8 @@ function Start_Update_data(){
       }
     }
     //
-    colorScale = d3.scale.quantile().domain([menor,maior]).range(['#f7fcfd','#e5f5f9','#ccece6','#99d8c9','#66c2a4','#41ae76','#238b45','#006d2c','#00441b']); 
-    grades = d3.scale.linear().domain([menor,maior]).ticks(12);
+    colorScale = d3.scaleQuantize().domain([menor,maior]).range(['#f7fcfd','#e5f5f9','#ccece6','#99d8c9','#66c2a4','#41ae76','#238b45','#006d2c','#00441b']); 
+    grades = colorScale.ticks();
 
     addLegend();
     distribution_data=Object.keys(dist).map(function(key) {
